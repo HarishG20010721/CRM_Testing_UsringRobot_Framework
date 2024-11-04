@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.3 on win32)" generated="2024-11-04T17:42:35.795290" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Development\RobotFramework Selenium\CRM_Testing_Robot_Framework\TestCases\Test.robot">
+<test id="s1-t1" name="Should be able to add new customer" line="78">
+<kw name="Start Web Testing" owner="Common" type="SETUP">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T17:42:37.899515" level="INFO">Web Testing Started</msg>
+<arg>Web Testing Started</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T17:42:37.899515" elapsed="0.000000"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>../Results/ScreenShots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-11-04T17:42:37.899515" elapsed="0.004054"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-04T17:42:37.904569" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-04T17:42:37.904569" elapsed="7.333262"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>15s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-11-04T17:42:45.238831" elapsed="0.002999"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-04T17:42:45.241830" elapsed="0.047001"/>
+</kw>
+<status status="PASS" start="2024-11-04T17:42:37.898501" elapsed="7.390330"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="take screenshot">
+<msg time="2024-11-04T17:42:45.291825" level="FAIL">No keyword with name 'take screenshot' found.</msg>
+<arg>${image_name}</arg>
+<status status="FAIL" start="2024-11-04T17:42:45.291825" elapsed="0.000000">No keyword with name 'take screenshot' found.</status>
+</kw>
+<arg>rootPage</arg>
+<status status="FAIL" start="2024-11-04T17:42:45.289828" elapsed="0.001997">No keyword with name 'take screenshot' found.</status>
+</kw>
+<kw name="Click On Signin Link" owner="HomePage">
+<status status="NOT RUN" start="2024-11-04T17:42:45.291825" elapsed="0.000000"/>
+</kw>
+<kw name="Validate Page Should Contain Header" owner="LoginPage">
+<status status="NOT RUN" start="2024-11-04T17:42:45.291825" elapsed="0.000000"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<arg>loginPage</arg>
+<status status="NOT RUN" start="2024-11-04T17:42:45.292825" elapsed="0.000000"/>
+</kw>
+<kw name="Enter Email Id" owner="LoginPage">
+<arg>harishgandolkar@gmail.com</arg>
+<status status="NOT RUN" start="2024-11-04T17:42:45.292825" elapsed="0.000000"/>
+</kw>
+<kw name="Enter Password" owner="LoginPage">
+<arg>1234</arg>
+<status status="NOT RUN" start="2024-11-04T17:42:45.292825" elapsed="0.000000"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<arg>loginPage_AfterEntering_Data</arg>
+<status status="NOT RUN" start="2024-11-04T17:42:45.292825" elapsed="0.000000"/>
+</kw>
+<kw name="Click on Submit Button" owner="LoginPage">
+<status status="NOT RUN" start="2024-11-04T17:42:45.293830" elapsed="0.000000"/>
+</kw>
+<kw name="Validate Page Should Contain Header" owner="CustomerServicePage">
+<status status="NOT RUN" start="2024-11-04T17:42:45.293830" elapsed="0.000000"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<arg>dashboardPage</arg>
+<status status="NOT RUN" start="2024-11-04T17:42:45.293830" elapsed="0.000000"/>
+</kw>
+<kw name="Click On New Customer Link" owner="CustomerServicePage">
+<status status="NOT RUN" start="2024-11-04T17:42:45.294842" elapsed="0.000000"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<arg>addCustomerPage</arg>
+<status status="NOT RUN" start="2024-11-04T17:42:45.294842" elapsed="0.000000"/>
+</kw>
+<kw name="Validate Add Customer Header is Visible" owner="AddCustomer">
+<status status="NOT RUN" start="2024-11-04T17:42:45.294842" elapsed="0.000000"/>
+</kw>
+<kw name="Enter Email Id" owner="AddCustomer">
+<arg>harish2001@gmail.com</arg>
+<status status="NOT RUN" start="2024-11-04T17:42:45.294842" elapsed="0.000000"/>
+</kw>
+<kw name="Enter First Name" owner="AddCustomer">
+<arg>Harish</arg>
+<status status="NOT RUN" start="2024-11-04T17:42:45.294842" elapsed="0.000000"/>
+</kw>
+<kw name="Enter Last Name" owner="AddCustomer">
+<arg>Gandolkar</arg>
+<status status="NOT RUN" start="2024-11-04T17:42:45.294842" elapsed="0.000000"/>
+</kw>
+<kw name="Enter City" owner="AddCustomer">
+<arg>Hubli</arg>
+<status status="NOT RUN" start="2024-11-04T17:42:45.295843" elapsed="0.000000"/>
+</kw>
+<kw name="Select State" owner="AddCustomer">
+<arg>FL</arg>
+<status status="NOT RUN" start="2024-11-04T17:42:45.295843" elapsed="0.000000"/>
+</kw>
+<kw name="Select Gender" owner="AddCustomer">
+<arg>male</arg>
+<status status="NOT RUN" start="2024-11-04T17:42:45.295843" elapsed="0.000000"/>
+</kw>
+<kw name="Click On Promotional list" owner="AddCustomer">
+<status status="NOT RUN" start="2024-11-04T17:42:45.295843" elapsed="0.000000"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<arg>addCustomerPage_After_Entering_Data</arg>
+<status status="NOT RUN" start="2024-11-04T17:42:45.296829" elapsed="0.000000"/>
+</kw>
+<kw name="Click On Submit Button" owner="AddCustomer">
+<status status="NOT RUN" start="2024-11-04T17:42:45.296829" elapsed="0.000000"/>
+</kw>
+<kw name="Validate Customer is Successfully Added or Not" owner="CustomerServicePage">
+<status status="NOT RUN" start="2024-11-04T17:42:45.296829" elapsed="0.000000"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<arg>dashboardPage</arg>
+<status status="NOT RUN" start="2024-11-04T17:42:45.297845" elapsed="0.000000"/>
+</kw>
+<kw name="Stop Web Testing" owner="Common" type="TEARDOWN">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T17:42:45.298828" level="INFO">Web Testing Finished</msg>
+<arg>Web Testing Finished</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T17:42:45.298828" elapsed="0.000000"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-11-04T17:42:45.298828" elapsed="7.191784"/>
+</kw>
+<status status="PASS" start="2024-11-04T17:42:45.298828" elapsed="7.191784"/>
+</kw>
+<doc>Should be able to add new customer</doc>
+<tag>1005</tag>
+<tag>Contacts</tag>
+<tag>Smoke</tag>
+<status status="FAIL" start="2024-11-04T17:42:37.897525" elapsed="14.593087">No keyword with name 'take screenshot' found.</status>
+</test>
+<test id="s1-t2" name="Should be able to cancel adding new customer" line="107">
+<kw name="Start Web Testing" owner="Common" type="SETUP">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T17:42:52.493602" level="INFO">Web Testing Started</msg>
+<arg>Web Testing Started</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T17:42:52.493602" elapsed="0.000000"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>../Results/ScreenShots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-11-04T17:42:52.494602" elapsed="0.005003"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-04T17:42:52.500611" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm'.</msg>
+<msg time="2024-11-04T17:43:01.857739" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Results/ScreenShots/selenium-screenshot-1.png"&gt;&lt;img src="../../Results/ScreenShots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-04T17:43:01.857739" level="FAIL">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=128.0.6613.85)
+Stacktrace:
+	GetHandleVerifier [0x007D81F3+26163]
+	(No symbol) [0x00769CA4]
+	(No symbol) [0x006624C3]
+	(No symbol) [0x0065AAD1]
+	(No symbol) [0x0064E668]
+	(No symbol) [0x0065008B]
+	(No symbol) [0x0064E8B7]
+	(No symbol) [0x0064E25C]
+	(No symbol) [0x0064E188]
+	(No symbol) [0x0064C588]
+	(No symbol) [0x0064CB1B]
+	(No symbol) [0x00664F04]
+	(No symbol) [0x006E5107]
+	(No symbol) [0x006CACBC]
+	(No symbol) [0x006E4661]
+	(No symbol) [0x006CAA56]
+	(No symbol) [0x0069BE89]
+	(No symbol) [0x0069C8CD]
+	GetHandleVerifier [0x00AACED3+2994963]
+	GetHandleVerifier [0x00B01749+3341193]
+	GetHandleVerifier [0x00867ACF+614159]
+	GetHandleVerifier [0x0086F15C+644508]
+	(No symbol) [0x007727DD]
+	(No symbol) [0x0076F6D8]
+	(No symbol) [0x0076F875]
+	(No symbol) [0x00761BF6]
+	BaseThreadInitThunk [0x75D57BA9+25]
+	RtlInitializeExceptionChain [0x775CC0CB+107]
+	RtlClearBits [0x775CC04F+191]
+</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-11-04T17:42:52.500611" elapsed="9.473060">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=128.0.6613.85)
+Stacktrace:
+	GetHandleVerifier [0x007D81F3+26163]
+	(No symbol) [0x00769CA4]
+	(No symbol) [0x006624C3]
+	(No symbol) [0x0065AAD1]
+	(No symbol) [0x0064E668]
+	(No symbol) [0x0065008B]
+	(No symbol) [0x0064E8B7]
+	(No symbol) [0x0064E25C]
+	(No symbol) [0x0064E188]
+	(No symbol) [0x0064C588]
+	(No symbol) [0x0064CB1B]
+	(No symbol) [0x00664F04]
+	(No symbol) [0x006E5107]
+	(No symbol) [0x006CACBC]
+	(No symbol) [0x006E4661]
+	(No symbol) [0x006CAA56]
+	(No symbol) [0x0069BE89]
+	(No symbol) [0x0069C8CD]
+	GetHandleVerifier [0x00AACED3+2994963]
+	GetHandleVerifier [0x00B01749+3341193]
+	GetHandleVerifier [0x00867ACF+614159]
+	GetHandleVerifier [0x0086F15C+644508]
+	(No symbol) [0x007727DD]
+	(No symbol) [0x0076F6D8]
+	(No symbol) [0x0076F875]
+	(No symbol) [0x00761BF6]
+	BaseThreadInitThunk [0x75D57BA9+25]
+	RtlInitializeExceptionChain [0x775CC0CB+107]
+	RtlClearBits [0x775CC04F+191]
+</status>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>15s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2024-11-04T17:43:01.973671" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-11-04T17:43:01.973671" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-11-04T17:42:52.492607" elapsed="9.481064">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=128.0.6613.85)
+Stacktrace:
+	GetHandleVerifier [0x007D81F3+26163]
+	(No symbol) [0x00769CA4]
+	(No symbol) [0x006624C3]
+	(No symbol) [0x0065AAD1]
+	(No symbol) [0x0064E668]
+	(No symbol) [0x0065008B]
+	(No symbol) [0x0064E8B7]
+	(No symbol) [0x0064E25C]
+	(No symbol) [0x0064E188]
+	(No symbol) [0x0064C588]
+	(No symbol) [0x0064CB1B]
+	(No symbol) [0x00664F04]
+	(No symbol) [0x006E5107]
+	(No symbol) [0x006CACBC]
+	(No symbol) [0x006E4661]
+	(No symbol) [0x006CAA56]
+	(No symbol) [0x0069BE89]
+	(No symbol) [0x0069C8CD]
+	GetHandleVerifier [0x00AACED3+2994963]
+	GetHandleVerifier [0x00B01749+3341193]
+	GetHandleVerifier [0x00867ACF+614159]
+	GetHandleVerifier [0x0086F15C+644508]
+	(No symbol) [0x007727DD]
+	(No symbol) [0x0076F6D8]
+	(No symbol) [0x0076F875]
+	(No symbol) [0x00761BF6]
+	BaseThreadInitThunk [0x75D57BA9+25]
+	RtlInitializeExceptionChain [0x775CC0CB+107]
+	RtlClearBits [0x775CC04F+191]
+</status>
+</kw>
+<kw name="Stop Web Testing" owner="Common" type="TEARDOWN">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T17:43:01.974684" level="INFO">Web Testing Finished</msg>
+<arg>Web Testing Finished</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T17:43:01.974684" elapsed="0.000000"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-11-04T17:43:01.974684" elapsed="3.138171"/>
+</kw>
+<status status="PASS" start="2024-11-04T17:43:01.974684" elapsed="3.138171"/>
+</kw>
+<doc>Should be able to cancel adding new customer</doc>
+<tag>1006</tag>
+<tag>Contacts</tag>
+<tag>Functional</tag>
+<status status="FAIL" start="2024-11-04T17:42:52.491608" elapsed="12.622244">Setup failed:
+WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=128.0.6613.85)
+Stacktrace:
+	GetHandleVerifier [0x007D81F3+26163]
+	(No symbol) [0x00769CA4]
+	(No symbol) [0x006624C3]
+	(No symbol) [0x0065AAD1]
+	(No symbol) [0x0064E668]
+	(No symbol) [0x0065008B]
+	(No symbol) [0x0064E8B7]
+	(No symbol) [0x0064E25C]
+	(No symbol) [0x0064E188]
+	(No symbol) [0x0064C588]
+	(No symbol) [0x0064CB1B]
+	(No symbol) [0x00664F04]
+	(No symbol) [0x006E5107]
+	(No symbol) [0x006CACBC]
+	(No symbol) [0x006E4661]
+	(No symbol) [0x006CAA56]
+	(No symbol) [0x0069BE89]
+	(No symbol) [0x0069C8CD]
+	GetHandleVerifier [0x00AACED3+2994963]
+	GetHandleVerifier [0x00B01749+3341193]
+	GetHandleVerifier [0x00867ACF+614159]
+	GetHandleVerifier [0x0086F15C+644508]
+	(No symbol) [0x007727DD]
+	(No symbol) [0x0076F6D8]
+	(No symbol) [0x0076F875]
+	(No symbol) [0x00761BF6]
+	BaseThreadInitThunk [0x75D57BA9+25]
+	RtlInitializeExceptionChain [0x775CC0CB+107]
+	RtlClearBits [0x775CC04F+191]
+</status>
+</test>
+<status status="FAIL" start="2024-11-04T17:42:35.801318" elapsed="29.316535"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">1005</stat>
+<stat pass="0" fail="1" skip="0">1006</stat>
+<stat pass="0" fail="2" skip="0">Contacts</stat>
+<stat pass="0" fail="1" skip="0">Functional</stat>
+<stat pass="0" fail="1" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
