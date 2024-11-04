@@ -20,5 +20,5 @@ Validate Web Location Before Login
     wait until location contains  ${location_befor_sighin}
 
 Validate Element Should be Present
-    wait until page contains  ${HomePage_header_element}
+    wait until page contains element  ${HomePage_header_element}
 

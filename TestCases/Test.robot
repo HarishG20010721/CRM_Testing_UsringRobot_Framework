@@ -21,7 +21,7 @@ Home page should load Test
     [Documentation]  Validate Home Page is Open When User Open The Website
     [Tags]  Smoke  Home  1001
     HomePage.Validate Web Location Before Login
-    Common.Get Screenshot
+    Common.Get Screenshot  rootPage
     HomePage.Validate Element Should be Present
 
 Login should succeed with valid credentials
@@ -43,13 +43,13 @@ Login should fail with missing credentials
 
     [Documentation]  Login Test Invalid Credentials
     [Tags]  Functional  Login  1003
-    Common.Get Screenshot  rootPage
+    Common.Get Screenshot  rootPagef
     HomePage.Click On Signin Link
     LoginPage.Validate Page Should Contain Header
     Common.Get Screenshot  loginPage
     LoginPage.Enter Email Id  harishgandolkar
     LoginPage.Enter Password  1234
-    LoginPage.Click on Remenber Check Box
+    LoginPage.Click on Remember me Check Box
     Common.Get Screenshot  loginPage_AfterEntering_Data
     LoginPage.Click on Submit Button
     LoginPage.Validate Page Should Contain Header
@@ -69,7 +69,7 @@ Should be able to log out
     Common.Get Screenshot  loginPage_AfterEntering_Data
     LoginPage.Click on Submit Button
     LoginPage.Validate Page Should Contain Header
-    Commom.Get Screenshot   dashboardPage
+    Common.Get Screenshot   dashboardPage
     CustomerServicePage.Click On Logout Link
     Common.Get Screenshot   signoutPage
     LogoutPage.Validate Signed Out Header Presence

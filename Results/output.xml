@@ -1,346 +1,1316 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.3 on win32)" generated="2024-11-04T17:42:35.795290" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1 (Python 3.12.3 on win32)" generated="2024-11-04T18:21:24.414296" rpa="false" schemaversion="5">
 <suite id="s1" name="Test" source="C:\Development\RobotFramework Selenium\CRM_Testing_Robot_Framework\TestCases\Test.robot">
-<test id="s1-t1" name="Should be able to add new customer" line="78">
+<test id="s1-t1" name="Home page should load Test" line="19">
 <kw name="Start Web Testing" owner="Common" type="SETUP">
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-11-04T17:42:37.899515" level="INFO">Web Testing Started</msg>
+<msg time="2024-11-04T18:21:27.344808" level="INFO">Web Testing Started</msg>
 <arg>Web Testing Started</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-04T17:42:37.899515" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-04T18:21:27.344808" elapsed="0.000000"/>
 </kw>
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:21:27.344808" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
 <arg>../Results/ScreenShots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2024-11-04T17:42:37.899515" elapsed="0.004054"/>
+<status status="PASS" start="2024-11-04T18:21:27.344808" elapsed="0.015619"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-04T17:42:37.904569" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm'.</msg>
+<msg time="2024-11-04T18:21:27.360427" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-04T17:42:37.904569" elapsed="7.333262"/>
+<status status="PASS" start="2024-11-04T18:21:27.360427" elapsed="8.231874"/>
 </kw>
 <kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
 <arg>15s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-11-04T17:42:45.238831" elapsed="0.002999"/>
+<status status="PASS" start="2024-11-04T18:21:35.592301" elapsed="0.001001"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-04T17:42:45.241830" elapsed="0.047001"/>
+<status status="PASS" start="2024-11-04T18:21:35.593302" elapsed="0.054550"/>
 </kw>
-<status status="PASS" start="2024-11-04T17:42:37.898501" elapsed="7.390330"/>
+<status status="PASS" start="2024-11-04T18:21:27.344808" elapsed="8.303044"/>
+</kw>
+<kw name="Validate Web Location Before Login" owner="HomePage">
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>${location_befor_sighin}</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2024-11-04T18:21:35.648863" elapsed="0.009570"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:21:35.648863" elapsed="0.009570"/>
 </kw>
 <kw name="Get Screenshot" owner="Common">
-<kw name="take screenshot">
-<msg time="2024-11-04T17:42:45.291825" level="FAIL">No keyword with name 'take screenshot' found.</msg>
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:21:35.996556" level="INFO" html="true">&lt;a href="rootPage_5.jpg"&gt;&lt;img src="rootPage_5.jpg" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>${image_name}</arg>
-<status status="FAIL" start="2024-11-04T17:42:45.291825" elapsed="0.000000">No keyword with name 'take screenshot' found.</status>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:21:35.659452" elapsed="0.337104"/>
 </kw>
 <arg>rootPage</arg>
-<status status="FAIL" start="2024-11-04T17:42:45.289828" elapsed="0.001997">No keyword with name 'take screenshot' found.</status>
+<status status="PASS" start="2024-11-04T18:21:35.659452" elapsed="0.337104"/>
 </kw>
-<kw name="Click On Signin Link" owner="HomePage">
-<status status="NOT RUN" start="2024-11-04T17:42:45.291825" elapsed="0.000000"/>
+<kw name="Validate Element Should be Present" owner="HomePage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:21:51.460465" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Results/ScreenShots/selenium-screenshot-2.png"&gt;&lt;img src="../../Results/ScreenShots/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-04T18:21:51.460465" level="FAIL">Text 'tag=h2' did not appear in 5 seconds.</msg>
+<arg>${HomePage_header_element}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2024-11-04T18:21:35.997555" elapsed="15.557107">Text 'tag=h2' did not appear in 5 seconds.</status>
 </kw>
-<kw name="Validate Page Should Contain Header" owner="LoginPage">
-<status status="NOT RUN" start="2024-11-04T17:42:45.291825" elapsed="0.000000"/>
-</kw>
-<kw name="Get Screenshot" owner="Common">
-<arg>loginPage</arg>
-<status status="NOT RUN" start="2024-11-04T17:42:45.292825" elapsed="0.000000"/>
-</kw>
-<kw name="Enter Email Id" owner="LoginPage">
-<arg>harishgandolkar@gmail.com</arg>
-<status status="NOT RUN" start="2024-11-04T17:42:45.292825" elapsed="0.000000"/>
-</kw>
-<kw name="Enter Password" owner="LoginPage">
-<arg>1234</arg>
-<status status="NOT RUN" start="2024-11-04T17:42:45.292825" elapsed="0.000000"/>
-</kw>
-<kw name="Get Screenshot" owner="Common">
-<arg>loginPage_AfterEntering_Data</arg>
-<status status="NOT RUN" start="2024-11-04T17:42:45.292825" elapsed="0.000000"/>
-</kw>
-<kw name="Click on Submit Button" owner="LoginPage">
-<status status="NOT RUN" start="2024-11-04T17:42:45.293830" elapsed="0.000000"/>
-</kw>
-<kw name="Validate Page Should Contain Header" owner="CustomerServicePage">
-<status status="NOT RUN" start="2024-11-04T17:42:45.293830" elapsed="0.000000"/>
-</kw>
-<kw name="Get Screenshot" owner="Common">
-<arg>dashboardPage</arg>
-<status status="NOT RUN" start="2024-11-04T17:42:45.293830" elapsed="0.000000"/>
-</kw>
-<kw name="Click On New Customer Link" owner="CustomerServicePage">
-<status status="NOT RUN" start="2024-11-04T17:42:45.294842" elapsed="0.000000"/>
-</kw>
-<kw name="Get Screenshot" owner="Common">
-<arg>addCustomerPage</arg>
-<status status="NOT RUN" start="2024-11-04T17:42:45.294842" elapsed="0.000000"/>
-</kw>
-<kw name="Validate Add Customer Header is Visible" owner="AddCustomer">
-<status status="NOT RUN" start="2024-11-04T17:42:45.294842" elapsed="0.000000"/>
-</kw>
-<kw name="Enter Email Id" owner="AddCustomer">
-<arg>harish2001@gmail.com</arg>
-<status status="NOT RUN" start="2024-11-04T17:42:45.294842" elapsed="0.000000"/>
-</kw>
-<kw name="Enter First Name" owner="AddCustomer">
-<arg>Harish</arg>
-<status status="NOT RUN" start="2024-11-04T17:42:45.294842" elapsed="0.000000"/>
-</kw>
-<kw name="Enter Last Name" owner="AddCustomer">
-<arg>Gandolkar</arg>
-<status status="NOT RUN" start="2024-11-04T17:42:45.294842" elapsed="0.000000"/>
-</kw>
-<kw name="Enter City" owner="AddCustomer">
-<arg>Hubli</arg>
-<status status="NOT RUN" start="2024-11-04T17:42:45.295843" elapsed="0.000000"/>
-</kw>
-<kw name="Select State" owner="AddCustomer">
-<arg>FL</arg>
-<status status="NOT RUN" start="2024-11-04T17:42:45.295843" elapsed="0.000000"/>
-</kw>
-<kw name="Select Gender" owner="AddCustomer">
-<arg>male</arg>
-<status status="NOT RUN" start="2024-11-04T17:42:45.295843" elapsed="0.000000"/>
-</kw>
-<kw name="Click On Promotional list" owner="AddCustomer">
-<status status="NOT RUN" start="2024-11-04T17:42:45.295843" elapsed="0.000000"/>
-</kw>
-<kw name="Get Screenshot" owner="Common">
-<arg>addCustomerPage_After_Entering_Data</arg>
-<status status="NOT RUN" start="2024-11-04T17:42:45.296829" elapsed="0.000000"/>
-</kw>
-<kw name="Click On Submit Button" owner="AddCustomer">
-<status status="NOT RUN" start="2024-11-04T17:42:45.296829" elapsed="0.000000"/>
-</kw>
-<kw name="Validate Customer is Successfully Added or Not" owner="CustomerServicePage">
-<status status="NOT RUN" start="2024-11-04T17:42:45.296829" elapsed="0.000000"/>
-</kw>
-<kw name="Get Screenshot" owner="Common">
-<arg>dashboardPage</arg>
-<status status="NOT RUN" start="2024-11-04T17:42:45.297845" elapsed="0.000000"/>
+<status status="FAIL" start="2024-11-04T18:21:35.996556" elapsed="15.558106">Text 'tag=h2' did not appear in 5 seconds.</status>
 </kw>
 <kw name="Stop Web Testing" owner="Common" type="TEARDOWN">
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-11-04T17:42:45.298828" level="INFO">Web Testing Finished</msg>
+<msg time="2024-11-04T18:21:51.570283" level="INFO">Web Testing Finished</msg>
 <arg>Web Testing Finished</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-04T17:42:45.298828" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-04T18:21:51.570283" elapsed="0.000000"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-04T17:42:45.298828" elapsed="7.191784"/>
+<status status="PASS" start="2024-11-04T18:21:51.570283" elapsed="8.113039"/>
 </kw>
-<status status="PASS" start="2024-11-04T17:42:45.298828" elapsed="7.191784"/>
+<status status="PASS" start="2024-11-04T18:21:51.554662" elapsed="8.129660"/>
+</kw>
+<doc>Validate Home Page is Open When User Open The Website</doc>
+<tag>1001</tag>
+<tag>Home</tag>
+<tag>Smoke</tag>
+<status status="FAIL" start="2024-11-04T18:21:27.344808" elapsed="32.339514">Text 'tag=h2' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t2" name="Login should succeed with valid credentials" line="27">
+<kw name="Start Web Testing" owner="Common" type="SETUP">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:21:59.688320" level="INFO">Web Testing Started</msg>
+<arg>Web Testing Started</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:21:59.688320" elapsed="0.000000"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:21:59.688320" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+<arg>../Results/ScreenShots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-11-04T18:21:59.689317" elapsed="0.008012"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:21:59.698328" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-04T18:21:59.697329" elapsed="14.410510"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>15s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-11-04T18:22:14.107839" elapsed="0.003005"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-04T18:22:14.110844" elapsed="0.067140"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:21:59.687319" elapsed="14.490863"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:22:14.353400" level="INFO" html="true">&lt;a href="rootPage_6.jpg"&gt;&lt;img src="rootPage_6.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:22:14.179186" elapsed="0.175204"/>
+</kw>
+<arg>rootPage</arg>
+<status status="PASS" start="2024-11-04T18:22:14.178182" elapsed="0.176208"/>
+</kw>
+<kw name="Click On Signin Link" owner="HomePage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:14.356392" level="INFO">Clicked On Signin Link</msg>
+<arg>Clicked On Signin Link</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:14.355392" elapsed="0.001000"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:22:14.356392" level="INFO">Clicking link 'id=SignIn'.</msg>
+<arg>${Signin_link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:22:14.356392" elapsed="2.383481"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${location_after_signin}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2024-11-04T18:22:16.740887" elapsed="0.046759"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:14.355392" elapsed="2.432254"/>
+</kw>
+<kw name="Validate Page Should Contain Header" owner="LoginPage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_HEADER_ELEMENT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-04T18:22:16.789642" elapsed="0.031895"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:16.788637" elapsed="0.032900"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:22:16.952455" level="INFO" html="true">&lt;a href="loginPage_5.jpg"&gt;&lt;img src="loginPage_5.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:22:16.822539" elapsed="0.129916"/>
+</kw>
+<arg>loginPage</arg>
+<status status="PASS" start="2024-11-04T18:22:16.822539" elapsed="0.129916"/>
+</kw>
+<kw name="Enter Email Id" owner="LoginPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:16.954450" level="INFO">Email id entered harishgandolkar@gmail.com</msg>
+<arg>Email id entered ${email_id}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:16.954450" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:22:16.955458" level="INFO">Typing text 'harishgandolkar@gmail.com' into text field 'id=email-id'.</msg>
+<arg>${EMAIL_ID_LOCATOR}</arg>
+<arg>${email_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:22:16.954450" elapsed="0.412125"/>
+</kw>
+<arg>harishgandolkar@gmail.com</arg>
+<status status="PASS" start="2024-11-04T18:22:16.953452" elapsed="0.413123"/>
+</kw>
+<kw name="Enter Password" owner="LoginPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:17.369967" level="INFO">Password entered 1234</msg>
+<arg>Password entered ${password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:17.368962" elapsed="0.001005"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:22:17.370975" level="INFO">Typing text '1234' into text field 'id=password'.</msg>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:22:17.369967" elapsed="0.244919"/>
+</kw>
+<arg>1234</arg>
+<status status="PASS" start="2024-11-04T18:22:17.367960" elapsed="0.246926"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:22:17.743591" level="INFO" html="true">&lt;a href="loginPage_AfterEntering_Data_5.jpg"&gt;&lt;img src="loginPage_AfterEntering_Data_5.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:22:17.616867" elapsed="0.126724"/>
+</kw>
+<arg>loginPage_AfterEntering_Data</arg>
+<status status="PASS" start="2024-11-04T18:22:17.615886" elapsed="0.127705"/>
+</kw>
+<kw name="Click on Submit Button" owner="LoginPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:17.744574" level="INFO">Clicked on Submit Button</msg>
+<arg>Clicked on Submit Button</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:17.744574" elapsed="0.001028"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:22:17.746584" level="INFO">Clicking button 'id=submit-id'.</msg>
+<arg>${SUBMIT_BUTTON_LOCATOR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:22:17.745602" elapsed="0.520952"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:17.744574" elapsed="0.522990"/>
+</kw>
+<kw name="Validate Page Should Contain Header" owner="CustomerServicePage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Page_Header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-04T18:22:18.269558" elapsed="0.490776"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:18.268553" elapsed="0.491781"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:22:18.909090" level="INFO" html="true">&lt;a href="dashboardPage_7.jpg"&gt;&lt;img src="dashboardPage_7.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:22:18.761334" elapsed="0.147756"/>
+</kw>
+<arg>dashboardPage</arg>
+<status status="PASS" start="2024-11-04T18:22:18.761334" elapsed="0.147756"/>
+</kw>
+<kw name="Stop Web Testing" owner="Common" type="TEARDOWN">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:18.911024" level="INFO">Web Testing Finished</msg>
+<arg>Web Testing Finished</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:18.911024" elapsed="0.000000"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-11-04T18:22:18.911024" elapsed="8.058346"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:18.910011" elapsed="8.059359"/>
+</kw>
+<doc>Login Test Valid Credentials</doc>
+<tag>1002</tag>
+<tag>Login</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-11-04T18:21:59.686323" elapsed="27.283047"/>
+</test>
+<test id="s1-t3" name="Login should fail with missing credentials" line="42">
+<kw name="Start Web Testing" owner="Common" type="SETUP">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:26.969370" level="INFO">Web Testing Started</msg>
+<arg>Web Testing Started</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:26.969370" elapsed="0.000000"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:22:26.969370" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+<arg>../Results/ScreenShots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-11-04T18:22:26.969370" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:22:26.969370" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-04T18:22:26.969370" elapsed="10.711415"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>15s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-11-04T18:22:37.680785" elapsed="0.002010"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-04T18:22:37.682795" elapsed="0.051533"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:26.969370" elapsed="10.765972"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:22:37.829518" level="INFO" html="true">&lt;a href="rootPagef_1.jpg"&gt;&lt;img src="rootPagef_1.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:22:37.737329" elapsed="0.093187"/>
+</kw>
+<arg>rootPagef</arg>
+<status status="PASS" start="2024-11-04T18:22:37.736335" elapsed="0.094181"/>
+</kw>
+<kw name="Click On Signin Link" owner="HomePage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:37.831515" level="INFO">Clicked On Signin Link</msg>
+<arg>Clicked On Signin Link</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:37.831515" elapsed="0.000000"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:22:37.831515" level="INFO">Clicking link 'id=SignIn'.</msg>
+<arg>${Signin_link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:22:37.831515" elapsed="1.116119"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${location_after_signin}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2024-11-04T18:22:38.948622" elapsed="0.021004"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:37.830516" elapsed="1.139110"/>
+</kw>
+<kw name="Validate Page Should Contain Header" owner="LoginPage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_HEADER_ELEMENT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-04T18:22:38.970630" elapsed="0.017010"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:38.970630" elapsed="0.017010"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:22:39.082972" level="INFO" html="true">&lt;a href="loginPage_6.jpg"&gt;&lt;img src="loginPage_6.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:22:38.988631" elapsed="0.094341"/>
+</kw>
+<arg>loginPage</arg>
+<status status="PASS" start="2024-11-04T18:22:38.988631" elapsed="0.094341"/>
+</kw>
+<kw name="Enter Email Id" owner="LoginPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:39.083965" level="INFO">Email id entered harishgandolkar</msg>
+<arg>Email id entered ${email_id}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:39.083965" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:22:39.084966" level="INFO">Typing text 'harishgandolkar' into text field 'id=email-id'.</msg>
+<arg>${EMAIL_ID_LOCATOR}</arg>
+<arg>${email_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:22:39.084966" elapsed="0.177637"/>
+</kw>
+<arg>harishgandolkar</arg>
+<status status="PASS" start="2024-11-04T18:22:39.083965" elapsed="0.179636"/>
+</kw>
+<kw name="Enter Password" owner="LoginPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:39.264598" level="INFO">Password entered 1234</msg>
+<arg>Password entered ${password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:39.264598" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:22:39.265601" level="INFO">Typing text '1234' into text field 'id=password'.</msg>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:22:39.264598" elapsed="0.158297"/>
+</kw>
+<arg>1234</arg>
+<status status="PASS" start="2024-11-04T18:22:39.263601" elapsed="0.159294"/>
+</kw>
+<kw name="Click on Remember me Check Box" owner="LoginPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:39.423900" level="INFO">Clicked On Remember Check box</msg>
+<arg>Clicked On Remember Check box</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:39.423900" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:22:39.423900" level="INFO">Clicking button 'id=remember'.</msg>
+<arg>${CHECK_BOX_LOCATOR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:22:39.423900" elapsed="0.071893"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:39.423900" elapsed="0.071893"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:22:39.588335" level="INFO" html="true">&lt;a href="loginPage_AfterEntering_Data_6.jpg"&gt;&lt;img src="loginPage_AfterEntering_Data_6.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:22:39.496789" elapsed="0.091546"/>
+</kw>
+<arg>loginPage_AfterEntering_Data</arg>
+<status status="PASS" start="2024-11-04T18:22:39.496789" elapsed="0.091546"/>
+</kw>
+<kw name="Click on Submit Button" owner="LoginPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:39.589336" level="INFO">Clicked on Submit Button</msg>
+<arg>Clicked on Submit Button</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:39.589336" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:22:39.590336" level="INFO">Clicking button 'id=submit-id'.</msg>
+<arg>${SUBMIT_BUTTON_LOCATOR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:22:39.590336" elapsed="0.124179"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:39.589336" elapsed="0.125179"/>
+</kw>
+<kw name="Validate Page Should Contain Header" owner="LoginPage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_HEADER_ELEMENT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-04T18:22:39.716516" elapsed="0.014598"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:39.715520" elapsed="0.015594"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:22:39.833608" level="INFO" html="true">&lt;a href="dashboardPage_8.jpg"&gt;&lt;img src="dashboardPage_8.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:22:39.732132" elapsed="0.102471"/>
+</kw>
+<arg>dashboardPage</arg>
+<status status="PASS" start="2024-11-04T18:22:39.732132" elapsed="0.102471"/>
+</kw>
+<kw name="Stop Web Testing" owner="Common" type="TEARDOWN">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:39.835608" level="INFO">Web Testing Finished</msg>
+<arg>Web Testing Finished</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:39.834603" elapsed="0.001005"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-11-04T18:22:39.835608" elapsed="7.445495"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:39.834603" elapsed="7.446500"/>
+</kw>
+<doc>Login Test Invalid Credentials</doc>
+<tag>1003</tag>
+<tag>Functional</tag>
+<tag>Login</tag>
+<status status="PASS" start="2024-11-04T18:22:26.969370" elapsed="20.311733"/>
+</test>
+<test id="s1-t4" name="Should be able to log out" line="58">
+<kw name="Start Web Testing" owner="Common" type="SETUP">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:47.281103" level="INFO">Web Testing Started</msg>
+<arg>Web Testing Started</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:47.281103" elapsed="0.000000"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:22:47.281103" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+<arg>../Results/ScreenShots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-11-04T18:22:47.281103" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:22:47.281103" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-04T18:22:47.281103" elapsed="8.045019"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>15s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-11-04T18:22:55.326122" elapsed="0.001002"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-04T18:22:55.328132" elapsed="0.046040"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:47.281103" elapsed="8.093069"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:22:55.500654" level="INFO" html="true">&lt;a href="rootPage_7.jpg"&gt;&lt;img src="rootPage_7.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:22:55.374172" elapsed="0.126482"/>
+</kw>
+<arg>rootPage</arg>
+<status status="PASS" start="2024-11-04T18:22:55.374172" elapsed="0.126482"/>
+</kw>
+<kw name="Click On Signin Link" owner="HomePage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:55.500654" level="INFO">Clicked On Signin Link</msg>
+<arg>Clicked On Signin Link</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:55.500654" elapsed="0.000000"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:22:55.500654" level="INFO">Clicking link 'id=SignIn'.</msg>
+<arg>${Signin_link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:22:55.500654" elapsed="2.020386"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${location_after_signin}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2024-11-04T18:22:57.521040" elapsed="0.033517"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:55.500654" elapsed="2.054907"/>
+</kw>
+<kw name="Validate Page Should Contain Header" owner="LoginPage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_HEADER_ELEMENT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-04T18:22:57.556562" elapsed="0.029999"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:57.555561" elapsed="0.032003"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:22:57.785079" level="INFO" html="true">&lt;a href="loginPage_7.jpg"&gt;&lt;img src="loginPage_7.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:22:57.589336" elapsed="0.195743"/>
+</kw>
+<arg>loginPage</arg>
+<status status="PASS" start="2024-11-04T18:22:57.587564" elapsed="0.197515"/>
+</kw>
+<kw name="Enter Email Id" owner="LoginPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:57.787068" level="INFO">Email id entered harishgandolkar</msg>
+<arg>Email id entered ${email_id}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:57.787068" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:22:57.788067" level="INFO">Typing text 'harishgandolkar' into text field 'id=email-id'.</msg>
+<arg>${EMAIL_ID_LOCATOR}</arg>
+<arg>${email_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:22:57.787068" elapsed="0.310774"/>
+</kw>
+<arg>harishgandolkar</arg>
+<status status="PASS" start="2024-11-04T18:22:57.786074" elapsed="0.312773"/>
+</kw>
+<kw name="Enter Password" owner="LoginPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:58.101827" level="INFO">Password entered 1234</msg>
+<arg>Password entered ${password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:58.100828" elapsed="0.000999"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:22:58.101827" level="INFO">Typing text '1234' into text field 'id=password'.</msg>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:22:58.101827" elapsed="0.222557"/>
+</kw>
+<arg>1234</arg>
+<status status="PASS" start="2024-11-04T18:22:58.099826" elapsed="0.225543"/>
+</kw>
+<kw name="Click on Remember me Check Box" owner="LoginPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:58.326906" level="INFO">Clicked On Remember Check box</msg>
+<arg>Clicked On Remember Check box</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:58.325886" elapsed="0.001020"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:22:58.326906" level="INFO">Clicking button 'id=remember'.</msg>
+<arg>${CHECK_BOX_LOCATOR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:22:58.326906" elapsed="0.128670"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:58.325886" elapsed="0.129690"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:22:58.598685" level="INFO" html="true">&lt;a href="loginPage_AfterEntering_Data_7.jpg"&gt;&lt;img src="loginPage_AfterEntering_Data_7.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:22:58.456582" elapsed="0.142103"/>
+</kw>
+<arg>loginPage_AfterEntering_Data</arg>
+<status status="PASS" start="2024-11-04T18:22:58.456582" elapsed="0.142103"/>
+</kw>
+<kw name="Click on Submit Button" owner="LoginPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:58.601688" level="INFO">Clicked on Submit Button</msg>
+<arg>Clicked on Submit Button</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:58.601688" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:22:58.603699" level="INFO">Clicking button 'id=submit-id'.</msg>
+<arg>${SUBMIT_BUTTON_LOCATOR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:22:58.602694" elapsed="0.224256"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:58.599693" elapsed="0.227257"/>
+</kw>
+<kw name="Validate Page Should Contain Header" owner="LoginPage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_HEADER_ELEMENT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-04T18:22:58.828936" elapsed="0.027001"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:58.827939" elapsed="0.027998"/>
+</kw>
+<kw name="Commom.Get Screenshot">
+<msg time="2024-11-04T18:22:58.860961" level="FAIL">No keyword with name 'Commom.Get Screenshot' found. Did you mean:
+    Common.Get Screenshot</msg>
+<arg>dashboardPage</arg>
+<status status="FAIL" start="2024-11-04T18:22:58.860961" elapsed="0.001018">No keyword with name 'Commom.Get Screenshot' found. Did you mean:
+    Common.Get Screenshot</status>
+</kw>
+<kw name="Click On Logout Link" owner="CustomerServicePage">
+<status status="NOT RUN" start="2024-11-04T18:22:58.861979" elapsed="0.000000"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<arg>signoutPage</arg>
+<status status="NOT RUN" start="2024-11-04T18:22:58.862941" elapsed="0.000000"/>
+</kw>
+<kw name="Validate Signed Out Header Presence" owner="LogoutPage">
+<status status="NOT RUN" start="2024-11-04T18:22:58.863952" elapsed="0.000000"/>
+</kw>
+<kw name="Stop Web Testing" owner="Common" type="TEARDOWN">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:22:58.866948" level="INFO">Web Testing Finished</msg>
+<arg>Web Testing Finished</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:22:58.865953" elapsed="0.000995"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-11-04T18:22:58.866948" elapsed="7.964531"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:22:58.864942" elapsed="7.966537"/>
+</kw>
+<doc>Should be able to log out</doc>
+<tag>1004</tag>
+<tag>Functional</tag>
+<tag>Login</tag>
+<status status="FAIL" start="2024-11-04T18:22:47.281103" elapsed="19.554372">No keyword with name 'Commom.Get Screenshot' found. Did you mean:
+    Common.Get Screenshot</status>
+</test>
+<test id="s1-t5" name="Should be able to add new customer" line="78">
+<kw name="Start Web Testing" owner="Common" type="SETUP">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:06.839492" level="INFO">Web Testing Started</msg>
+<arg>Web Testing Started</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:06.838492" elapsed="0.001000"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:06.839492" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+<arg>../Results/ScreenShots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-11-04T18:23:06.839492" elapsed="0.005503"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:06.846028" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-04T18:23:06.846028" elapsed="10.802180"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>15s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-11-04T18:23:17.649215" elapsed="0.007521"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-04T18:23:17.658766" elapsed="0.117192"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:06.838492" elapsed="10.937466"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:23:18.005989" level="INFO" html="true">&lt;a href="rootPage_8.jpg"&gt;&lt;img src="rootPage_8.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:23:17.777954" elapsed="0.228035"/>
+</kw>
+<arg>rootPage</arg>
+<status status="PASS" start="2024-11-04T18:23:17.777954" elapsed="0.229034"/>
+</kw>
+<kw name="Click On Signin Link" owner="HomePage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:18.007980" level="INFO">Clicked On Signin Link</msg>
+<arg>Clicked On Signin Link</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:18.007980" elapsed="0.000991"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:18.008971" level="INFO">Clicking link 'id=SignIn'.</msg>
+<arg>${Signin_link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:18.008971" elapsed="2.023260"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${location_after_signin}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2024-11-04T18:23:20.032231" elapsed="0.042574"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:18.007980" elapsed="2.066825"/>
+</kw>
+<kw name="Validate Page Should Contain Header" owner="LoginPage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_HEADER_ELEMENT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-04T18:23:20.076824" elapsed="0.027980"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:20.075810" elapsed="0.029995"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:23:20.267953" level="INFO" html="true">&lt;a href="loginPage_8.jpg"&gt;&lt;img src="loginPage_8.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:23:20.106806" elapsed="0.161147"/>
+</kw>
+<arg>loginPage</arg>
+<status status="PASS" start="2024-11-04T18:23:20.105805" elapsed="0.162148"/>
+</kw>
+<kw name="Enter Email Id" owner="LoginPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:20.269950" level="INFO">Email id entered harishgandolkar@gmail.com</msg>
+<arg>Email id entered ${email_id}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:20.269950" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:20.270951" level="INFO">Typing text 'harishgandolkar@gmail.com' into text field 'id=email-id'.</msg>
+<arg>${EMAIL_ID_LOCATOR}</arg>
+<arg>${email_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:20.269950" elapsed="0.378186"/>
+</kw>
+<arg>harishgandolkar@gmail.com</arg>
+<status status="PASS" start="2024-11-04T18:23:20.268958" elapsed="0.379178"/>
+</kw>
+<kw name="Enter Password" owner="LoginPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:20.650127" level="INFO">Password entered 1234</msg>
+<arg>Password entered ${password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:20.650127" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:20.651126" level="INFO">Typing text '1234' into text field 'id=password'.</msg>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:20.651126" elapsed="0.218293"/>
+</kw>
+<arg>1234</arg>
+<status status="PASS" start="2024-11-04T18:23:20.649126" elapsed="0.220293"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:23:21.045254" level="INFO" html="true">&lt;a href="loginPage_AfterEntering_Data_8.jpg"&gt;&lt;img src="loginPage_AfterEntering_Data_8.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:23:20.871448" elapsed="0.174789"/>
+</kw>
+<arg>loginPage_AfterEntering_Data</arg>
+<status status="PASS" start="2024-11-04T18:23:20.870417" elapsed="0.175820"/>
+</kw>
+<kw name="Click on Submit Button" owner="LoginPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:21.048255" level="INFO">Clicked on Submit Button</msg>
+<arg>Clicked on Submit Button</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:21.047244" elapsed="0.001011"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:21.048255" level="INFO">Clicking button 'id=submit-id'.</msg>
+<arg>${SUBMIT_BUTTON_LOCATOR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:21.048255" elapsed="0.500114"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:21.047244" elapsed="0.501125"/>
+</kw>
+<kw name="Validate Page Should Contain Header" owner="CustomerServicePage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Page_Header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-04T18:23:21.550353" elapsed="0.342147"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:21.549344" elapsed="0.344158"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:23:22.069954" level="INFO" html="true">&lt;a href="dashboardPage_9.jpg"&gt;&lt;img src="dashboardPage_9.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:23:21.894500" elapsed="0.175454"/>
+</kw>
+<arg>dashboardPage</arg>
+<status status="PASS" start="2024-11-04T18:23:21.893502" elapsed="0.177452"/>
+</kw>
+<kw name="Click On New Customer Link" owner="CustomerServicePage">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:22.072946" level="INFO">Clicking link 'id=new-customer'.</msg>
+<arg>${new_customer_link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:22.072946" elapsed="0.824987"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:22.898934" level="INFO">Clicked on New Customer Link</msg>
+<arg>Clicked on New Customer Link</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:22.897933" elapsed="0.001001"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:22.071947" elapsed="0.826987"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:23:23.038303" level="INFO" html="true">&lt;a href="addCustomerPage_5.jpg"&gt;&lt;img src="addCustomerPage_5.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:23:22.902934" elapsed="0.136370"/>
+</kw>
+<arg>addCustomerPage</arg>
+<status status="PASS" start="2024-11-04T18:23:22.899942" elapsed="0.139362"/>
+</kw>
+<kw name="Validate Add Customer Header is Visible" owner="AddCustomer">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${ADD_CUSTOMER_HEADER}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-04T18:23:23.040300" elapsed="0.014012"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:23.055309" level="INFO">Executing JavaScript:
+document.body.style.zoom="80%"
+Without any arguments.</msg>
+<arg>document.body.style.zoom="80%"</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-11-04T18:23:23.054312" elapsed="0.032182"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:23.039304" elapsed="0.047190"/>
+</kw>
+<kw name="Enter Email Id" owner="AddCustomer">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:23.087495" level="INFO">Typing text 'harish2001@gmail.com' into text field 'id=EmailAddress'.</msg>
+<arg>${EMAIL_ID_ADDCUSTOMART_LOCATOR}</arg>
+<arg>${email_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:23.087495" elapsed="0.300049"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:23.388548" level="INFO">Email is Entered</msg>
+<arg>Email is Entered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:23.388548" elapsed="0.000000"/>
+</kw>
+<arg>harish2001@gmail.com</arg>
+<status status="PASS" start="2024-11-04T18:23:23.087495" elapsed="0.301053"/>
+</kw>
+<kw name="Enter First Name" owner="AddCustomer">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:23.390544" level="INFO">Typing text 'Harish' into text field 'id=FirstName'.</msg>
+<arg>${FIRST_NAME_LOCATOR}</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:23.389544" elapsed="0.199262"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:23.588806" level="INFO">First Name is Entered</msg>
+<arg>First Name is Entered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:23.588806" elapsed="0.000000"/>
+</kw>
+<arg>Harish</arg>
+<status status="PASS" start="2024-11-04T18:23:23.389544" elapsed="0.200260"/>
+</kw>
+<kw name="Enter Last Name" owner="AddCustomer">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:23.590799" level="INFO">Typing text 'Gandolkar' into text field 'id=LastName'.</msg>
+<arg>${LAST_NAME_LOCATOR}</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:23.590799" elapsed="0.198757"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:23.789556" level="INFO">Last Name is Entered</msg>
+<arg>Last Name is Entered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:23.789556" elapsed="0.000000"/>
+</kw>
+<arg>Gandolkar</arg>
+<status status="PASS" start="2024-11-04T18:23:23.589804" elapsed="0.199752"/>
+</kw>
+<kw name="Enter City" owner="AddCustomer">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:23.793569" level="INFO">Typing text 'Hubli' into text field 'id=City'.</msg>
+<arg>${CITY}</arg>
+<arg>${city_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:23.791567" elapsed="0.178413"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:23.970999" level="INFO">City is Entered</msg>
+<arg>City is Entered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:23.970999" elapsed="0.000000"/>
+</kw>
+<arg>Hubli</arg>
+<status status="PASS" start="2024-11-04T18:23:23.790555" elapsed="0.180444"/>
+</kw>
+<kw name="Select State" owner="AddCustomer">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:23.971994" level="INFO">Clicking element 'id=StateOrRegion'.</msg>
+<arg>${STATE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:23.971994" elapsed="0.152324"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:24.125328" level="INFO">Clicking element 'xpath=//option[@value='FL']'.</msg>
+<arg>xpath=//option[@value='${city_code}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:24.125328" elapsed="0.081181"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:24.206509" level="INFO">State is Selected</msg>
+<arg>State is Selected</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:24.206509" elapsed="0.000000"/>
+</kw>
+<arg>FL</arg>
+<status status="PASS" start="2024-11-04T18:23:23.970999" elapsed="0.235510"/>
+</kw>
+<kw name="Select Gender" owner="AddCustomer">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:24.208503" level="INFO">Clicking element 'xpath=//input[@value='male']'.</msg>
+<arg>xpath=//input[@value='${gender}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:24.207508" elapsed="0.112544"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:24.321074" level="INFO">Gender is Selected</msg>
+<arg>Gender is Selected</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:24.321074" elapsed="0.000000"/>
+</kw>
+<arg>male</arg>
+<status status="PASS" start="2024-11-04T18:23:24.207508" elapsed="0.113566"/>
+</kw>
+<kw name="Click On Promotional list" owner="AddCustomer">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:24.322074" level="INFO">Clicking element 'xpath=//input[@value='promos-yes']'.</msg>
+<arg>${PROMOTIONAL_LIST}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:24.322074" elapsed="0.093546"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:24.416627" level="INFO">Clicked on Promotional List check box</msg>
+<arg>Clicked on Promotional List check box</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:24.416627" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:24.322074" elapsed="0.094553"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:23:24.512825" level="INFO" html="true">&lt;a href="addCustomerPage_After_Entering_Data_3.jpg"&gt;&lt;img src="addCustomerPage_After_Entering_Data_3.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:23:24.417627" elapsed="0.096165"/>
+</kw>
+<arg>addCustomerPage_After_Entering_Data</arg>
+<status status="PASS" start="2024-11-04T18:23:24.417627" elapsed="0.096165"/>
+</kw>
+<kw name="Click On Submit Button" owner="AddCustomer">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SUBMIT_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-04T18:23:24.514799" elapsed="0.053292"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:24.569099" level="INFO">Clicking button 'xpath=//button[@class='btn btn-primary']'.</msg>
+<arg>${SUBMIT_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:24.568091" elapsed="0.507780"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:25.075871" level="INFO">Clicked On Submit Button</msg>
+<arg>Clicked On Submit Button</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:25.075871" elapsed="0.001003"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:24.514799" elapsed="0.562075"/>
+</kw>
+<kw name="Validate Customer is Successfully Added or Not" owner="CustomerServicePage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Add_Customer_Success_Message_Locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-04T18:23:25.077881" elapsed="0.044006"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:25.076874" elapsed="0.045013"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:23:25.208550" level="INFO" html="true">&lt;a href="dashboardPage_10.jpg"&gt;&lt;img src="dashboardPage_10.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:23:25.121887" elapsed="0.086663"/>
+</kw>
+<arg>dashboardPage</arg>
+<status status="PASS" start="2024-11-04T18:23:25.121887" elapsed="0.086663"/>
+</kw>
+<kw name="Stop Web Testing" owner="Common" type="TEARDOWN">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:25.210565" level="INFO">Web Testing Finished</msg>
+<arg>Web Testing Finished</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:25.210565" elapsed="0.000000"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-11-04T18:23:25.211550" elapsed="8.003854"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:25.209567" elapsed="8.005837"/>
 </kw>
 <doc>Should be able to add new customer</doc>
 <tag>1005</tag>
 <tag>Contacts</tag>
 <tag>Smoke</tag>
-<status status="FAIL" start="2024-11-04T17:42:37.897525" elapsed="14.593087">No keyword with name 'take screenshot' found.</status>
+<status status="PASS" start="2024-11-04T18:23:06.837484" elapsed="26.377920"/>
 </test>
-<test id="s1-t2" name="Should be able to cancel adding new customer" line="107">
+<test id="s1-t6" name="Should be able to cancel adding new customer" line="107">
 <kw name="Start Web Testing" owner="Common" type="SETUP">
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-11-04T17:42:52.493602" level="INFO">Web Testing Started</msg>
+<msg time="2024-11-04T18:23:33.215404" level="INFO">Web Testing Started</msg>
 <arg>Web Testing Started</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-04T17:42:52.493602" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-04T18:23:33.215404" elapsed="0.000000"/>
 </kw>
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:33.215404" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
 <arg>../Results/ScreenShots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2024-11-04T17:42:52.494602" elapsed="0.005003"/>
+<status status="PASS" start="2024-11-04T18:23:33.215404" elapsed="0.000000"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-04T17:42:52.500611" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm'.</msg>
-<msg time="2024-11-04T17:43:01.857739" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Results/ScreenShots/selenium-screenshot-1.png"&gt;&lt;img src="../../Results/ScreenShots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-04T17:43:01.857739" level="FAIL">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
-  (Session info: chrome=128.0.6613.85)
-Stacktrace:
-	GetHandleVerifier [0x007D81F3+26163]
-	(No symbol) [0x00769CA4]
-	(No symbol) [0x006624C3]
-	(No symbol) [0x0065AAD1]
-	(No symbol) [0x0064E668]
-	(No symbol) [0x0065008B]
-	(No symbol) [0x0064E8B7]
-	(No symbol) [0x0064E25C]
-	(No symbol) [0x0064E188]
-	(No symbol) [0x0064C588]
-	(No symbol) [0x0064CB1B]
-	(No symbol) [0x00664F04]
-	(No symbol) [0x006E5107]
-	(No symbol) [0x006CACBC]
-	(No symbol) [0x006E4661]
-	(No symbol) [0x006CAA56]
-	(No symbol) [0x0069BE89]
-	(No symbol) [0x0069C8CD]
-	GetHandleVerifier [0x00AACED3+2994963]
-	GetHandleVerifier [0x00B01749+3341193]
-	GetHandleVerifier [0x00867ACF+614159]
-	GetHandleVerifier [0x0086F15C+644508]
-	(No symbol) [0x007727DD]
-	(No symbol) [0x0076F6D8]
-	(No symbol) [0x0076F875]
-	(No symbol) [0x00761BF6]
-	BaseThreadInitThunk [0x75D57BA9+25]
-	RtlInitializeExceptionChain [0x775CC0CB+107]
-	RtlClearBits [0x775CC04F+191]
-</msg>
+<msg time="2024-11-04T18:23:33.215404" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="FAIL" start="2024-11-04T17:42:52.500611" elapsed="9.473060">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
-  (Session info: chrome=128.0.6613.85)
-Stacktrace:
-	GetHandleVerifier [0x007D81F3+26163]
-	(No symbol) [0x00769CA4]
-	(No symbol) [0x006624C3]
-	(No symbol) [0x0065AAD1]
-	(No symbol) [0x0064E668]
-	(No symbol) [0x0065008B]
-	(No symbol) [0x0064E8B7]
-	(No symbol) [0x0064E25C]
-	(No symbol) [0x0064E188]
-	(No symbol) [0x0064C588]
-	(No symbol) [0x0064CB1B]
-	(No symbol) [0x00664F04]
-	(No symbol) [0x006E5107]
-	(No symbol) [0x006CACBC]
-	(No symbol) [0x006E4661]
-	(No symbol) [0x006CAA56]
-	(No symbol) [0x0069BE89]
-	(No symbol) [0x0069C8CD]
-	GetHandleVerifier [0x00AACED3+2994963]
-	GetHandleVerifier [0x00B01749+3341193]
-	GetHandleVerifier [0x00867ACF+614159]
-	GetHandleVerifier [0x0086F15C+644508]
-	(No symbol) [0x007727DD]
-	(No symbol) [0x0076F6D8]
-	(No symbol) [0x0076F875]
-	(No symbol) [0x00761BF6]
-	BaseThreadInitThunk [0x75D57BA9+25]
-	RtlInitializeExceptionChain [0x775CC0CB+107]
-	RtlClearBits [0x775CC04F+191]
-</status>
+<status status="PASS" start="2024-11-04T18:23:33.215404" elapsed="9.011967"/>
 </kw>
 <kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
 <arg>15s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="NOT RUN" start="2024-11-04T17:43:01.973671" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-04T18:23:42.232978" elapsed="0.000000"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" start="2024-11-04T17:43:01.973671" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-04T18:23:42.232978" elapsed="0.482446"/>
 </kw>
-<status status="FAIL" start="2024-11-04T17:42:52.492607" elapsed="9.481064">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
-  (Session info: chrome=128.0.6613.85)
-Stacktrace:
-	GetHandleVerifier [0x007D81F3+26163]
-	(No symbol) [0x00769CA4]
-	(No symbol) [0x006624C3]
-	(No symbol) [0x0065AAD1]
-	(No symbol) [0x0064E668]
-	(No symbol) [0x0065008B]
-	(No symbol) [0x0064E8B7]
-	(No symbol) [0x0064E25C]
-	(No symbol) [0x0064E188]
-	(No symbol) [0x0064C588]
-	(No symbol) [0x0064CB1B]
-	(No symbol) [0x00664F04]
-	(No symbol) [0x006E5107]
-	(No symbol) [0x006CACBC]
-	(No symbol) [0x006E4661]
-	(No symbol) [0x006CAA56]
-	(No symbol) [0x0069BE89]
-	(No symbol) [0x0069C8CD]
-	GetHandleVerifier [0x00AACED3+2994963]
-	GetHandleVerifier [0x00B01749+3341193]
-	GetHandleVerifier [0x00867ACF+614159]
-	GetHandleVerifier [0x0086F15C+644508]
-	(No symbol) [0x007727DD]
-	(No symbol) [0x0076F6D8]
-	(No symbol) [0x0076F875]
-	(No symbol) [0x00761BF6]
-	BaseThreadInitThunk [0x75D57BA9+25]
-	RtlInitializeExceptionChain [0x775CC0CB+107]
-	RtlClearBits [0x775CC04F+191]
-</status>
+<status status="PASS" start="2024-11-04T18:23:33.215404" elapsed="9.500020"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:23:42.854888" level="INFO" html="true">&lt;a href="rootPage_9.jpg"&gt;&lt;img src="rootPage_9.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:23:42.717938" elapsed="0.136950"/>
+</kw>
+<arg>rootPage</arg>
+<status status="PASS" start="2024-11-04T18:23:42.717938" elapsed="0.136950"/>
+</kw>
+<kw name="Click On Signin Link" owner="HomePage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:42.854888" level="INFO">Clicked On Signin Link</msg>
+<arg>Clicked On Signin Link</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:42.854888" elapsed="0.000000"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:42.854888" level="INFO">Clicking link 'id=SignIn'.</msg>
+<arg>${Signin_link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:42.854888" elapsed="0.786966"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${location_after_signin}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2024-11-04T18:23:43.641854" elapsed="0.041037"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:42.854888" elapsed="0.828980"/>
+</kw>
+<kw name="Validate Page Should Contain Header" owner="LoginPage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_HEADER_ELEMENT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-04T18:23:43.685869" elapsed="0.023537"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:43.684869" elapsed="0.024537"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:23:43.878629" level="INFO" html="true">&lt;a href="loginPage_9.jpg"&gt;&lt;img src="loginPage_9.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:23:43.711429" elapsed="0.167200"/>
+</kw>
+<arg>loginPage</arg>
+<status status="PASS" start="2024-11-04T18:23:43.710413" elapsed="0.169247"/>
+</kw>
+<kw name="Enter Email Id" owner="LoginPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:43.882627" level="INFO">Email id entered harishgandolkar@gmail.com</msg>
+<arg>Email id entered ${email_id}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:43.882627" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:43.883636" level="INFO">Typing text 'harishgandolkar@gmail.com' into text field 'id=email-id'.</msg>
+<arg>${EMAIL_ID_LOCATOR}</arg>
+<arg>${email_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:43.882627" elapsed="0.391969"/>
+</kw>
+<arg>harishgandolkar@gmail.com</arg>
+<status status="PASS" start="2024-11-04T18:23:43.881632" elapsed="0.392964"/>
+</kw>
+<kw name="Enter Password" owner="LoginPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:44.276599" level="INFO">Password entered 1234</msg>
+<arg>Password entered ${password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:44.275596" elapsed="0.001003"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:44.277597" level="INFO">Typing text '1234' into text field 'id=password'.</msg>
+<arg>${PASSWORD_LOCATOR}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:44.276599" elapsed="0.230274"/>
+</kw>
+<arg>1234</arg>
+<status status="PASS" start="2024-11-04T18:23:44.275596" elapsed="0.232511"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:23:44.654805" level="INFO" html="true">&lt;a href="loginPage_AfterEntering_Data_9.jpg"&gt;&lt;img src="loginPage_AfterEntering_Data_9.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:23:44.509833" elapsed="0.144972"/>
+</kw>
+<arg>loginPage_AfterEntering_Data</arg>
+<status status="PASS" start="2024-11-04T18:23:44.509247" elapsed="0.146541"/>
+</kw>
+<kw name="Click on Submit Button" owner="LoginPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:44.656808" level="INFO">Clicked on Submit Button</msg>
+<arg>Clicked on Submit Button</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:44.656808" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:44.656808" level="INFO">Clicking button 'id=submit-id'.</msg>
+<arg>${SUBMIT_BUTTON_LOCATOR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:44.656808" elapsed="0.429822"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:44.655788" elapsed="0.430842"/>
+</kw>
+<kw name="Validate Page Should Contain Header" owner="CustomerServicePage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Page_Header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-04T18:23:45.088615" elapsed="0.482054"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:45.087610" elapsed="0.483059"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:23:45.686296" level="INFO" html="true">&lt;a href="dashboard_3.jpg"&gt;&lt;img src="dashboard_3.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:23:45.573664" elapsed="0.113634"/>
+</kw>
+<arg>dashboard</arg>
+<status status="PASS" start="2024-11-04T18:23:45.571664" elapsed="0.115634"/>
+</kw>
+<kw name="Click On New Customer Link" owner="CustomerServicePage">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:45.688301" level="INFO">Clicking link 'id=new-customer'.</msg>
+<arg>${new_customer_link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:45.688301" elapsed="0.710478"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:46.399784" level="INFO">Clicked on New Customer Link</msg>
+<arg>Clicked on New Customer Link</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:46.399784" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:45.687298" elapsed="0.712486"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:23:46.530018" level="INFO" html="true">&lt;a href="addCustomerPage_6.jpg"&gt;&lt;img src="addCustomerPage_6.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:23:46.400778" elapsed="0.129742"/>
+</kw>
+<arg>addCustomerPage</arg>
+<status status="PASS" start="2024-11-04T18:23:46.400778" elapsed="0.129742"/>
+</kw>
+<kw name="Validate Add Customer Header is Visible" owner="AddCustomer">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${ADD_CUSTOMER_HEADER}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-04T18:23:46.532056" elapsed="0.015996"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:46.549051" level="INFO">Executing JavaScript:
+document.body.style.zoom="80%"
+Without any arguments.</msg>
+<arg>document.body.style.zoom="80%"</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-11-04T18:23:46.548052" elapsed="0.038072"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:46.532056" elapsed="0.054068"/>
+</kw>
+<kw name="Click On Cancle Link" owner="AddCustomer">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-11-04T18:23:46.588129" level="INFO">Clicking link 'xpath=//a[@class='btn btn-default']'.</msg>
+<arg>${CANCLE_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-04T18:23:46.587145" elapsed="0.534511"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T18:23:47.122663" level="INFO">Cliced on Cancle link</msg>
+<arg>Cliced on Cancle link</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T18:23:47.121656" elapsed="0.001007"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:46.587145" elapsed="0.535518"/>
+</kw>
+<kw name="Get Screenshot" owner="Common">
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-11-04T18:23:47.286040" level="INFO" html="true">&lt;a href="dashboardPage_11.jpg"&gt;&lt;img src="dashboardPage_11.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${image_name}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-11-04T18:23:47.124647" elapsed="0.161393"/>
+</kw>
+<arg>dashboardPage</arg>
+<status status="PASS" start="2024-11-04T18:23:47.123651" elapsed="0.162389"/>
+</kw>
+<kw name="Validate Page Should Contain Header" owner="CustomerServicePage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Page_Header}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-04T18:23:47.287047" elapsed="0.013540"/>
+</kw>
+<status status="PASS" start="2024-11-04T18:23:47.287047" elapsed="0.014538"/>
 </kw>
 <kw name="Stop Web Testing" owner="Common" type="TEARDOWN">
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-11-04T17:43:01.974684" level="INFO">Web Testing Finished</msg>
+<msg time="2024-11-04T18:23:47.302580" level="INFO">Web Testing Finished</msg>
 <arg>Web Testing Finished</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-04T17:43:01.974684" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-04T18:23:47.302580" elapsed="0.000000"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-04T17:43:01.974684" elapsed="3.138171"/>
+<status status="PASS" start="2024-11-04T18:23:47.303582" elapsed="7.919300"/>
 </kw>
-<status status="PASS" start="2024-11-04T17:43:01.974684" elapsed="3.138171"/>
+<status status="PASS" start="2024-11-04T18:23:47.302580" elapsed="7.920302"/>
 </kw>
 <doc>Should be able to cancel adding new customer</doc>
 <tag>1006</tag>
 <tag>Contacts</tag>
 <tag>Functional</tag>
-<status status="FAIL" start="2024-11-04T17:42:52.491608" elapsed="12.622244">Setup failed:
-WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
-  (Session info: chrome=128.0.6613.85)
-Stacktrace:
-	GetHandleVerifier [0x007D81F3+26163]
-	(No symbol) [0x00769CA4]
-	(No symbol) [0x006624C3]
-	(No symbol) [0x0065AAD1]
-	(No symbol) [0x0064E668]
-	(No symbol) [0x0065008B]
-	(No symbol) [0x0064E8B7]
-	(No symbol) [0x0064E25C]
-	(No symbol) [0x0064E188]
-	(No symbol) [0x0064C588]
-	(No symbol) [0x0064CB1B]
-	(No symbol) [0x00664F04]
-	(No symbol) [0x006E5107]
-	(No symbol) [0x006CACBC]
-	(No symbol) [0x006E4661]
-	(No symbol) [0x006CAA56]
-	(No symbol) [0x0069BE89]
-	(No symbol) [0x0069C8CD]
-	GetHandleVerifier [0x00AACED3+2994963]
-	GetHandleVerifier [0x00B01749+3341193]
-	GetHandleVerifier [0x00867ACF+614159]
-	GetHandleVerifier [0x0086F15C+644508]
-	(No symbol) [0x007727DD]
-	(No symbol) [0x0076F6D8]
-	(No symbol) [0x0076F875]
-	(No symbol) [0x00761BF6]
-	BaseThreadInitThunk [0x75D57BA9+25]
-	RtlInitializeExceptionChain [0x775CC0CB+107]
-	RtlClearBits [0x775CC04F+191]
-</status>
+<status status="PASS" start="2024-11-04T18:23:33.215404" elapsed="22.008478"/>
 </test>
-<status status="FAIL" start="2024-11-04T17:42:35.801318" elapsed="29.316535"/>
+<status status="FAIL" start="2024-11-04T18:21:24.421299" elapsed="150.804585"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="2" skip="0">All Tests</stat>
+<stat pass="4" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">1005</stat>
-<stat pass="0" fail="1" skip="0">1006</stat>
-<stat pass="0" fail="2" skip="0">Contacts</stat>
-<stat pass="0" fail="1" skip="0">Functional</stat>
-<stat pass="0" fail="1" skip="0">Smoke</stat>
+<stat pass="0" fail="1" skip="0">1001</stat>
+<stat pass="1" fail="0" skip="0">1002</stat>
+<stat pass="1" fail="0" skip="0">1003</stat>
+<stat pass="0" fail="1" skip="0">1004</stat>
+<stat pass="1" fail="0" skip="0">1005</stat>
+<stat pass="1" fail="0" skip="0">1006</stat>
+<stat pass="2" fail="0" skip="0">Contacts</stat>
+<stat pass="2" fail="1" skip="0">Functional</stat>
+<stat pass="0" fail="1" skip="0">Home</stat>
+<stat pass="2" fail="1" skip="0">Login</stat>
+<stat pass="2" fail="1" skip="0">Smoke</stat>
 </tag>
 <suite>
-<stat pass="0" fail="2" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="4" fail="2" skip="0" id="s1" name="Test">Test</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-11-04T18:21:27.344808" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+<msg time="2024-11-04T18:21:59.688320" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+<msg time="2024-11-04T18:22:26.969370" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+<msg time="2024-11-04T18:22:47.281103" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+<msg time="2024-11-04T18:23:06.839492" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+<msg time="2024-11-04T18:23:33.215404" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
 </errors>
 </robot>
